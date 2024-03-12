@@ -1,0 +1,17 @@
+<p>List of Cities</p>
+<h1>My City is{{citiesVisited}}</h1>
+<ul>
+    <li *ngFor="let city of citiesVisited">{{city}}</li>
+</ul>
+<ol>
+    <li *ngFor="let state of cities">{{state}}</li>
+</ol>
+<div class="div">
+    <h2>from the Child To Parent Component (Output)</h2>
+    <h2>I have visited {{numOfCitiesCountEmitted}} cities </h2>
+</div>
+<app-citiesvisited [numOfCities] = "numOfCities" (numOfCitiesVisitedEmit)="numOfCitiesCount($event)"></app-citiesvisited> 
+<div style="margin-top: 200px;" *ngif="numOfCitie >=  5">
+    <app-footer></app-footer>
+</div>
+ 
